@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/reset.css">
 </head>
 <body>
+    <script src="./scripts/main.js" defer></script>
     
+    <div class="flex-container">
+        <div class="top">
+            <div class="title"><h1>Etch-a-Sketch</h1></div>
+            <div class="mode">Mode: Colouring</div>
+        </div>
+        
+        <div class="canvas middle board">
+            <!-- Fill with JS -->
+
+        </div>
+
+        <div class="options bottom">
+            <div class="topRow">
+                <button onclick="changeColor('black')" class="black blackButton">Black</button>
+                <button onclick="changeColor('white')" class="eraser erasorButton">Eraser</button>
+                <button onclick="changeColor('gray')" class="colorHue grayButton">Grey</button>
+                <button onclick="changeColor('random')" class="random randomButton">Random</button>
+                <button onclick="resetBoard()" class="colorSwitch">Reset</button>
+            </div>
+            
+            <div> <!-- Fill with JS -->
+                <input type="text" placeholder="Size of Board" value="16" onchange="changeBoardSize(this.value)">
+                <button>Set Size</button>
+            <div>
+            <div class="error">Inputs must be between 2 and 100</div>
+        </div>
+    </div>
+
 </body>
 </html>
